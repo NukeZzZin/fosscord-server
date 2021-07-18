@@ -3,7 +3,6 @@
 	"version": "1.0.0",
 	"description": "Fosscord complete selfhostable open source discord-compatible server",
 	"scripts": {
-		"preinstall": "export MONGOMS_VERSION=4.4.3",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build:cdn": "tsc -b node_modules/@fosscord/cdn",
 		"build:gateway": "tsc -b node_modules/@fosscord/gateway",
