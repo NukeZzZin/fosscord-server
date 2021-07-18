@@ -50,10 +50,12 @@ if (cluster.isMaster && !process.env.masterStarted) {
 		mongod = exec(`${binary} --replSet ${replSet} --port ${port} --bind_ip ${host} --dbpath "${dbPath}"`);
 		console.log(`[Database] starting ...`);
 		process.env.MONGO_URL = `mongodb://${host}:${port}/${dbName}`;
+
 		const conn = mongoose.createConnection(process.env.MONGO_URL, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		});
+
 		await new Promise((resolve, reject) => {
 			conn.once("open", resolve);
 		});
