@@ -75,7 +75,7 @@ if (cluster.isMaster && !process.env.masterStarted) {
 				if (!x) return;
 				try {
 					const { msg } = JSON.parse(x);
-					console.log(msg);
+					// console.log(msg);
 				} catch (error) {}
 			});
 		});
