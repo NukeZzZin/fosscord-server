@@ -8,9 +8,9 @@
 		"build:gateway": "tsc -b node_modules/@fosscord/gateway",
 		"build:api": "tsc -b node_modules/@fosscord/api",
 		"build": "npm run build:cdn && npm run build:gateway && npm run build:api && tsc -b . ",
-		"bundle:macos": "npx caxa -i . -m 'This may take a while to run the first time, please wait...' --output 'fosscord-server.app' -- '{{caxa}}/node_modules/.bin/node' '{{caxa}}/dist/start.js' && tar -czf 'fosscord-server-macos.app.tgz' 'fosscord-server.app'",
-		"bundle:linux": "npx caxa -i . -m 'This may take a while to run the first time, please wait...' --output 'fosscord' -- '{{caxa}}/node_modules/.bin/node' '{{caxa}}/dist/start.js' && tar -czf 'fosscord-server-linux.tgz' 'fosscord'",
-		"bundle:windows": "npx caxa -i . -m \"This may take a while to run the first time, please wait...\" --output \"fosscord-server-windows.exe\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/dist/start.js\"",
+		"bundle:macos": "npx caxa -i . -m 'extracting' --output 'fosscord-server.app' -- '{{caxa}}/node_modules/.bin/node' '{{caxa}}/dist/start.js' && tar -czf 'fosscord-server-macos.app.tgz' 'fosscord-server.app'",
+		"bundle:linux": "npx caxa -i . -m 'extracting' --output 'fosscord' -- '{{caxa}}/node_modules/.bin/node' '{{caxa}}/dist/start.js' && tar -czf 'fosscord-server-linux.tgz' 'fosscord'",
+		"bundle:windows": "npx caxa -i . -m \"extracting\" --output \"fosscord-server-windows.exe\" -- \"{{caxa}}/node_modules/.bin/node\" \"{{caxa}}/dist/start.js\"",
 		"start": "npm run build && node dist/start.js"
 	},
 	"keywords": [],
