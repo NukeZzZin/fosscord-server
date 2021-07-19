@@ -3,7 +3,6 @@
 	"version": "1.0.0",
 	"description": "Fosscord complete selfhostable open source discord-compatible server",
 	"scripts": {
-		"preinstall": "cross-env-shell MONGOMS_VERSION=4.4.3",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build:cdn": "tsc -b node_modules/@fosscord/cdn",
 		"build:gateway": "tsc -b node_modules/@fosscord/gateway",
@@ -39,7 +38,6 @@
 		"@types/node-fetch": "^2.5.11",
 		"@types/node-os-utils": "^1.2.0",
 		"@types/ws": "^7.4.6",
-		"caxa": "^2.1.0",
-		"cross-env": "^7.0.3"
+		"caxa": "^2.1.0"
 	}
 }
