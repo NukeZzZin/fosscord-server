@@ -29,6 +29,8 @@ Fosscord is **f**ree **o**pen **s**ource **s**oftware compatible to dis**cord**.
 
 Logo by [@nwlandas](https://twitter.com/nwlandas).
 
+This server package combines the [api](https://github.com/fosscord/fosscord-api), [gateway](https://github.com/fosscord/fosscord-gateway) and [cdn](https://github.com/fosscord/fosscord-cdn) in one executable.
+
 ### Installation
 
 [Download](https://github.com/fosscord/fosscord-server/releases)
