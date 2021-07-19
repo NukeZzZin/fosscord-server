@@ -1,6 +1,6 @@
 // process.env.MONGOMS_DEBUG = "1";
 import fs from "fs";
-import { MongoBinary } from "mongodb-memory-server-global-4.4";
+import { MongoBinary } from "mongodb-memory-server";
 import path from "path";
 import cluster from "cluster";
 import os from "os";
@@ -46,7 +46,7 @@ if (cluster.isMaster && !process.env.masterStarted) {
 	}, 1000 * 60);
 
 	(async () => {
-		const binary = await MongoBinary.getPath();
+		var binary = await MongoBinary.getPath();
 		mongod = exec(`${binary} --replSet ${replSet} --port ${port} --bind_ip ${host} --dbpath "${dbPath}"`);
 		console.log(`[Database] starting ...`);
 		process.env.MONGO_URL = `mongodb://${host}:${port}/${dbName}`;
@@ -96,5 +96,5 @@ if (cluster.isMaster && !process.env.masterStarted) {
 		});
 	})();
 } else {
-	require("./server");
+	require("./Server");
 }
