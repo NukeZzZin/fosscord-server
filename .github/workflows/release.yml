@@ -65,10 +65,13 @@ jobs:
           draft: false
           prerelease: true # TODO: change this to false
           body: >
-            # Server
-            - [Linux](https://github.com/fosscord/fosscord-server/releases/download/v${{ steps.extract_version.outputs.version }}/fosscord-server-linux.tgz)
-            - [MacOS](https://github.com/fosscord/fosscord-server/releases/download/v${{ steps.extract_version.outputs.version }}/fosscord-server-macos.app.tgz)
+            ## Download
+
             - [Windows](https://github.com/fosscord/fosscord-server/releases/download/v${{ steps.extract_version.outputs.version }}/fosscord-server-windows.exe)
+
+            - [MacOS](https://github.com/fosscord/fosscord-server/releases/download/v${{ steps.extract_version.outputs.version }}/fosscord-server-macos.app.tgz)
+
+            - [Linux](https://github.com/fosscord/fosscord-server/releases/download/v${{ steps.extract_version.outputs.version }}/fosscord-server-linux.tgz)
 
       - uses: actions/upload-release-asset@v1
         env:
