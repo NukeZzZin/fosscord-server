@@ -61,9 +61,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v${{ steps.extract_version.outputs.version }}
-          release_name: Release ${{ steps.extract_version.outputs.version }}
+          release_name: Server v${{ steps.extract_version.outputs.version }}
           draft: false
           prerelease: true # TODO: change this to false
+          body: >
+            # Server
+            - [Linux](https://github.com/fosscord/fosscord-server/releases/download/v${{ steps.extract_version.outputs.version }}/fosscord-server-linux.tgz)
+            - [MacOS](https://github.com/fosscord/fosscord-server/releases/download/v${{ steps.extract_version.outputs.version }}/fosscord-server-macos.app.tgz)
+            - [Windows](https://github.com/fosscord/fosscord-server/releases/download/v${{ steps.extract_version.outputs.version }}/fosscord-server-windows.exe)
+
       - uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
